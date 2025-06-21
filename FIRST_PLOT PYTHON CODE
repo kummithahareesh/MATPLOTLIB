@@ -1,0 +1,11 @@
+#USER DEFINED PLOT ARE BUILDING
+import matplotlib.pyplot as plt
+x=['mon','tue','wed','thu','fri']
+y=[20,30,40,10,90]
+plt.plot(x,y)
+plt.title("Bakery week sales !")
+plt.xlabel("Week Days")
+plt.ylabel("Sales")
+plt.show()
+
+                
