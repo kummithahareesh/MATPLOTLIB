@@ -1,0 +1,13 @@
+# 2025 QUATAURE 1 SALE REPORT
+import matplotlib.pyplot as plt
+import random
+month=[1,2,3]
+sales=list(random.randint(10000,50000) for i in range(3))
+print(" Sales report plote building")
+plt.plot(month,sales,color='blue',linestyle='--',marker='o',label='Sales report',linewidth=2)
+plt.xlabel("months")
+plt.ylabel("sales")
+plt.legend()
+plt.xticks([1,2,3],['january','february','march'])
+plt.grid(color='gray',linestyle='-',linewidth=0.5)
+plt.show()
