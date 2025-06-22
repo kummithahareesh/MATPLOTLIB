@@ -23,3 +23,13 @@ plt.ylabel('count')
 plt.tight_layout()
 plt.savefig("Movie_vs_tvshows.png")
 plt.show()
+
+
+#pie chart builing
+rating_count=df['rating'].value_counts()
+plt.figure(figsize=(8,6))
+plt.pie(rating_count, labels=rating_count.index, autopct='%1.1f%%', startangle=90)
+plt.title("Percentage of the content")
+plt.tight_layout()
+plt.savefig("content_rating_pie.png")
+plt.show()
