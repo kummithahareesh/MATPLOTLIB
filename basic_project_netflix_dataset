@@ -1,0 +1,25 @@
+#importing the librarys
+import pandas as pd
+import matplotlib.pyplot as plt
+#loading the data
+df=pd.read_csv('netflix_titles.csv')
+print(df.head())
+
+#cleaning the data
+df=df.dropna(subset=['type','release_year','rating','country','duration'])
+type_counts=df['type'].value_counts()
+print(type_counts)
+#figuring the plotes
+
+print()
+print('Graph formation')
+plt.figure(figsize=(6,4))
+plt.bar(type_counts.index,type_counts.values,color=['skyblue','orange'])
+for i, val in enumerate(type_counts):
+    plt.text(i,val+1,str(val),ha='center',va='bottom')
+plt.title("No of Movies vs Tv shows in the Netflix")
+plt.xlabel("Type")
+plt.ylabel('count')
+plt.tight_layout()
+plt.savefig("Movie_vs_tvshows.png")
+plt.show()
